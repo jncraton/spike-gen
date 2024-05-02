@@ -23,7 +23,7 @@ def draw_card(name, hp):
 
     # Add the type icon
     type_img = Image.open("media/types/lightning.png")
-    img.paste(type_img, (154, 10, 170, 26))
+    img.paste(type_img, (154, 10, 170, 26), type_img)
 
     # Save the image
     img.save(f"{name}.png")
