@@ -29,5 +29,4 @@ def draw_card(name, hp):
     img.save(f"{name}.png")
 
 
-draw_card("Brightbulb", "120")
-draw_card("Benji", "1000")
+draw_card("Brightbulb", "140")
