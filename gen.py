@@ -21,7 +21,10 @@ def draw_card(name, hp):
 
     draw.rectangle([(10, 30), (215, 150)], fill="white", outline="black", width=1)
 
-    draw.rectangle([(160, 10), (170, 20)], fill="yellow", outline="black", width=1)
+    # Add the type icon
+    type_img = Image.open("media/types/lightning.png")
+    img.paste(type_img, (154, 10, 170, 26))
+
     # Save the image
     img.save(f"{name}.png")
 
