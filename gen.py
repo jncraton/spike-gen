@@ -29,4 +29,12 @@ def draw_card(name, hp):
     img.save(f"{name}.png")
 
 
-draw_card("Brightbulb", "140")
+spikeyes = [
+{
+    "name": "Brightbulb",
+    "hp": "140",
+},
+]
+
+for spikeye in spikeyes:
+    draw_card(spikeye['name'], spikeye['hp'])
