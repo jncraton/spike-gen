@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw
 
 
-def draw_card(name, hp):
+def draw_card(name, hp, type):
     """Draw a single Spikeye card"""
 
     # Create empty image
@@ -20,7 +20,7 @@ def draw_card(name, hp):
     draw.text((175, 15), f"HP : {hp}", "black")
 
     # Add the type icon
-    type_img = Image.open("media/types/lightning.png")
+    type_img = Image.open(f"media/types/{type.lower()}.png")
     img.paste(type_img, (154, 10, 170, 26), type_img)
 
     # Draw main art border
@@ -37,8 +37,9 @@ spikeyes = [
 {
     "name": "Britebulb",
     "hp": "140",
+    "type": "Lightning",
 },
 ]
 
 for spikeye in spikeyes:
-    draw_card(spikeye['name'], spikeye['hp'])
+    draw_card(spikeye['name'], spikeye['hp'], spikeye['type'])
