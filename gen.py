@@ -27,7 +27,7 @@ def draw_card(name, hp):
     draw.rectangle([(10, 30), (215, 150)], fill="tan", outline="black", width=1)
 
     # Draw main art
-    spike_img = Image.open("media/spikeyes/britebulb01.png")
+    spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png")
     img.paste(spike_img, (10, 30, 215, 150))
 
     # Save the image
