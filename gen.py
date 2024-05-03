@@ -20,7 +20,7 @@ def draw_card(name, hp, type):
     draw.text((175, 15), f"HP : {hp}", "black")
 
     # Add the type icon
-    type_img = Image.open(f"media/types/{type.lower()}.png")
+    type_img = Image.open(f"media/types/{type.lower()}.png").convert("RGBA")
     img.paste(type_img, (154, 10, 170, 26), type_img)
 
     # Draw main art border
