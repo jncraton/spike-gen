@@ -32,6 +32,7 @@ def draw_card(name, hp, type):
 
     # Save the image
     img.save(f"cards/{name}.png")
+    img.show()
 
 spikeyes = [
 {
