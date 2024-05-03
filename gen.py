@@ -35,7 +35,7 @@ def draw_card(name, hp):
 
 spikeyes = [
 {
-    "name": "Brightbulb",
+    "name": "Britebulb",
     "hp": "140",
 },
 ]
