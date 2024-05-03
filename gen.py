@@ -28,7 +28,7 @@ def draw_card(name, hp):
 
     # Draw main art
     spike_img = Image.open("media/spikeyes/britebulb01.png")
-    img.paste(spike_img, (10, 30, 215, 150), spike_img)
+    img.paste(spike_img, (10, 30, 215, 150))
 
     # Save the image
     img.save(f"{name}.png")
