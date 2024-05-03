@@ -31,17 +31,111 @@ def draw_card(name, hp, type):
     spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png")
     img.paste(spike_img, (10, 30, 215, 150))
 
+    # Draw attacks
+    allowed_attacks = [a for a in attacks if type in a["types"]]
+    shuffle(allowed_attacks)
+
+    # Draw each attack
+    for a, y in zip(allowed_attacks[:4], range(165, 350, 40)):
+        draw.text((15, y), f"{a['name']}", "black")
+        draw.text((15, y + 15), f"{a['description']}", "black")
+        draw.text((200, y), f"{a['damage']}", "black")
+
+        for i, energy_type in enumerate(a["energy"]):
+            x = 100 + i * 18
+            type_img = Image.open(f"media/types/{energy_type.lower()}.png").convert(
+                "RGBA"
+            )
+            img.paste(type_img, (x, y, x + 16, y + 16), type_img)
+
     # Save the image
     img.save(f"cards/{name}.png")
     img.show()
 
+
 spikeyes = [
-{
-    "name": "Britebulb",
-    "hp": "140",
-    "type": "Lightning",
-},
+    {
+        "name": "Britebulb",
+        "hp": 140,
+        "type": "Lightning",
+    },
+    {
+        "name": "Grassnlaid",
+        "hp": 140,
+        "type": "Leaf",
+    },
+    {
+        "name": "Smokeos",
+        "hp": 140,
+        "type": "Flame",
+    },
 ]
 
-for spikeye in spikeyes:
-    draw_card(spikeye['name'], spikeye['hp'], spikeye['type'])
+attacks = [
+    {
+        "types": ["Flame"],
+        "name": "Firespin",
+        "energy": ["Flame"] * 3,
+        "description": "",
+        "damage": 30,
+    },
+    {
+        "types": ["Flame"],
+        "name": "Flame punch",
+        "energy": ["Flame"] * 3,
+        "description": "",
+        "damage": 40,
+    },
+    {
+        "types": ["Flame"],
+        "name": "Wildfire",
+        "energy": ["Flame"] * 5,
+        "description": "This attack does 20 damage to this card.",
+        "damage": 140,
+    },
+    {
+        "types": ["Flame"],
+        "name": "Steam wall",
+        "energy": ["Flame"] * 2 + ["Wave"] * 2,
+        "description": "Halve the next damage done to this card.",
+        "damage": "",
+    },
+    {
+        "types": ["Flame"],
+        "name": "lava pour",
+        "energy": ["Flame"] * 4,
+        "description": "your opponent is burned",
+        "damage": 50,
+    },
+    {
+        "types": ["Flame", "Lightning"],
+        "name": "Hot bolt",
+        "energy": ["Flame"] * 2 + ["Lightning"] * 3,
+        "description": "",
+        "damage": 140,
+    },
+    {
+        "types": ["Flame"],
+        "name": "Charcoal",
+        "energy": ["Flame"] * 3 + ["stone"],
+        "description": "",
+        "damage": 120,
+    },
+    {
+        "types": ["Flame"],
+        "name": "Grassfire",
+        "energy": ["Flame"] * 1 + ["Leaf"] * 4,
+        "description": "+ 100 if your opponent is leaf type",
+        "damage": 100,
+    },
+    {
+        "types": ["Flame"],
+        "name": "Thunder slam",
+        "energy": ["Flame"] * 3,
+        "description": "",
+        "damage": 30,
+    },
+]
+
+for spikeye in spikeyes[-1:]:
+    draw_card(spikeye["name"], spikeye["hp"], spikeye["type"])
