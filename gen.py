@@ -1,4 +1,5 @@
 from PIL import Image, ImageDraw
+from random import randint, shuffle
 
 
 def draw_card(name, hp, type):
@@ -17,7 +18,7 @@ def draw_card(name, hp, type):
     draw.text((15, 15), name, "black")
 
     # Draw hp
-    draw.text((175, 15), f"HP : {hp}", "black")
+    draw.text((175, 15), f"HP : {hp + randint(-4, 4)*10}", "black")
 
     # Add the type icon
     type_img = Image.open(f"media/types/{type.lower()}.png").convert("RGBA")
