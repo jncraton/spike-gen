@@ -63,3 +63,6 @@ attacks = [
         "damage": 30,
     },
 ]
+
+for i, attack in enumerate(attacks):
+    attack['id'] = i
