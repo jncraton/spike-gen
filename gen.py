@@ -47,27 +47,9 @@ def draw_card(name, hp, type, attacks):
     img.show()
 
 
-spikeyes = [
-    {
-        "name": "Britebulb",
-        "hp": 140,
-        "type": "Lightning",
-    },
-    {
-        "name": "Grassnlaid",
-        "hp": 140,
-        "type": "Leaf",
-    },
-    {
-        "name": "Smokeos",
-        "hp": 140,
-        "type": "Flame",
-    },
-]
-
-
 def main():
     from attacks import attacks
+    from spikeyes import spikeyes
 
     for spikeye in spikeyes[-1:]:
         hp = spikeye["hp"] + randint(-4, 4) * 10
