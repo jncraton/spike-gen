@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 from random import randint, shuffle
 
 
-def draw_card(name, hp, type):
+def draw_card(name, hp, type, attacks):
     """Draw a single Spikeye card"""
 
     # Create empty image
@@ -31,12 +31,8 @@ def draw_card(name, hp, type):
     spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png")
     img.paste(spike_img, (10, 30, 215, 150))
 
-    # Draw attacks
-    allowed_attacks = [a for a in attacks if type in a["types"]]
-    shuffle(allowed_attacks)
-
     # Draw each attack
-    for a, y in zip(allowed_attacks[:4], range(165, 350, 40)):
+    for a, y in zip(attacks, range(165, 350, 40)):
         draw.text((15, y), f"{a['name']}", "black")
         draw.text((15, y + 15), f"{a['description']}", "black")
         draw.text((200, y), f"{a['damage']}", "black")
@@ -138,4 +134,7 @@ attacks = [
 for spikeye in spikeyes[-1:]:
     hp = spikeye["hp"] + randint(-4, 4) * 10
 
-    draw_card(spikeye["name"], hp, spikeye["type"])
+    allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
+    shuffle(allowed_attacks)
+
+    draw_card(spikeye["name"], hp, spikeye["type"], allowed_attacks[:4])
