@@ -43,7 +43,8 @@ def draw_card(name, hp, type, attacks):
             img.paste(energy_img, (x, y, x + 16, y + 16), energy_img)
 
     # Save the image
-    img.save(f"cards/{name}.png")
+    attack_ids = "-".join([str(a["id"]) for a in attacks])
+    img.save(f"cards/{type}-{name}-{hp}-{attack_ids}.png")
     img.show()
 
 
