@@ -18,7 +18,7 @@ def draw_card(name, hp, type):
     draw.text((15, 15), name, "black")
 
     # Draw hp
-    draw.text((175, 15), f"HP : {hp + randint(-4, 4)*10}", "black")
+    draw.text((175, 15), f"HP : {hp}", "black")
 
     # Add the type icon
     type_img = Image.open(f"media/types/{type.lower()}.png").convert("RGBA")
@@ -136,4 +136,6 @@ attacks = [
 ]
 
 for spikeye in spikeyes[-1:]:
-    draw_card(spikeye["name"], spikeye["hp"], spikeye["type"])
+    hp = spikeye["hp"] + randint(-4, 4) * 10
+
+    draw_card(spikeye["name"], hp, spikeye["type"])
