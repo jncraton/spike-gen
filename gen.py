@@ -32,7 +32,7 @@ def draw_card(name, hp, type, attacks):
     img.paste(spike_img, (10, 30, 215, 150))
 
     # Draw each attack
-    for a, y in zip(attacks, range(165, 350, 40)):
+    for a, y in zip(attacks, list(range(165, 350, 40))):
         draw.text((15, y), f"{a['name']}", "black")
         draw.text((15, y + 15), f"{a['description']}", "black")
         draw.text((200, y), f"{a['damage']}", "black")
