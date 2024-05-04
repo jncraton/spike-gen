@@ -131,10 +131,16 @@ attacks = [
     },
 ]
 
-for spikeye in spikeyes[-1:]:
-    hp = spikeye["hp"] + randint(-4, 4) * 10
 
-    allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
-    shuffle(allowed_attacks)
+def main():
+    for spikeye in spikeyes[-1:]:
+        hp = spikeye["hp"] + randint(-4, 4) * 10
 
-    draw_card(spikeye["name"], hp, spikeye["type"], allowed_attacks[:4])
+        allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
+        shuffle(allowed_attacks)
+
+        draw_card(spikeye["name"], hp, spikeye["type"], allowed_attacks[:4])
+
+
+if __name__ == "__main__":
+    main()
