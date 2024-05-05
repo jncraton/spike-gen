@@ -56,13 +56,27 @@ attacks = [
         "damage": 100,
     },
     {
-        "types": ["Flame"],
+        "types": ["Lightning"],
         "name": "Thunder slam",
-        "energy": ["Flame"] * 3,
+        "energy": ["Lightning"] * 3,
         "description": "",
-        "damage": 30,
+        "damage": 50,
+    },
+    {
+        "types": ["Lightning"],
+        "name": "Lightning rod",
+        "energy": ["Lightning"] * 5,
+        "description": "Lightning moves do x2 their normal damage",
+        "damage": 50,
+    },
+    {
+        "types": ["Wave", "Lightning"],
+        "name": "Storm",
+        "energy": ["Lightning"] * 2 + ["Wave"] * 2,
+        "description": "20 damage each turn to all cards",
+        "damage": 20,
     },
 ]
 
 for i, attack in enumerate(attacks):
-    attack['id'] = i
+    attack["id"] = i
