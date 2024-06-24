@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 from random import randint, shuffle
 
 
-def draw_card(name, hp, type, attacks):
+def draw_card(name, hp, type, attacks, rainbow):
     """Draw a single Spikeye card"""
 
     # Create empty image
@@ -28,8 +28,12 @@ def draw_card(name, hp, type, attacks):
     draw.rectangle([(10, 30), (215, 150)], fill="tan", outline="black", width=1)
 
     # Draw main art
-    spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png")
+    spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png").convert("RGBA")
     img.paste(spike_img, (10, 30, 215, 150))
+
+    if rainbow:
+        rainbow_img = Image.open(f"media/types/rainbow.png").convert("RGBA")
+        img.paste(rainbow_img, (10, 30, 215, 150), rainbow_img)
 
     # Draw each attack
     for a, y in zip(attacks, list(range(165, 350, 40))):
@@ -55,10 +59,15 @@ def main():
     for spikeye in spikeyes[-1:]:
         hp = spikeye["hp"] + randint(-4, 4) * 10
 
+        if randint(1, 36) == 1:
+            rainbow = True
+        else:
+            rainbow = False
+
         allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
         shuffle(allowed_attacks)
 
-        draw_card(spikeye["name"], hp, spikeye["type"], allowed_attacks[:4])
+        draw_card(spikeye["name"], hp, spikeye["type"], allowed_attacks[:4], rainbow)
 
 
 if __name__ == "__main__":
