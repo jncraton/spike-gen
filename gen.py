@@ -4,7 +4,8 @@ from random import randint, shuffle
 
 def draw_card(name, hp, type, attacks, rainbow):
     """Draw a single Spikeye card"""
-
+    if rainbow:
+        hp = hp * 2
     # Create empty image
     img = Image.new("RGB", (225, 350))
 
