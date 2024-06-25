@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 from random import randint, shuffle
 
 
-def draw_card(name, hp, type, attacks, rainbow):
+def draw_card(name, hp, type, attacks, rainbow, fa):
     """Draw a single Spikeye card"""
     if rainbow:
         hp = hp * 2
@@ -15,6 +15,18 @@ def draw_card(name, hp, type, attacks, rainbow):
     # Create border and background
     draw.rectangle([(0, 0), (225, 350)], fill="white", outline="tan", width=5)
 
+    # Draw fullart
+    if fa:
+        try:
+            filename = f"media/spikeyes/{name.lower()}01_fa.png"
+            spike_img = Image.open(filename).convert("RGBA")
+            img.paste(spike_img, (0, 0, 225, 350))
+        except FileNotFoundError:
+            fa = False
+        if rainbow and fa:
+            rainbow_img = Image.open(f"media/types/rainbowfa.png").convert("RGBA")
+            img.paste(rainbow_img, (0, 0, 225, 350), rainbow_img)
+
     # Draw name
     draw.text((15, 15), name, "black")
 
@@ -25,16 +37,17 @@ def draw_card(name, hp, type, attacks, rainbow):
     type_img = Image.open(f"media/types/{type.lower()}.png").convert("RGBA")
     img.paste(type_img, (154, 10, 170, 26), type_img)
 
-    # Draw main art border
-    draw.rectangle([(10, 30), (215, 150)], fill="tan", outline="black", width=1)
+    if not fa:
+        # Draw main art border
+        draw.rectangle([(10, 30), (215, 150)], fill="tan", outline="black", width=1)
 
-    # Draw main art
-    spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png").convert("RGBA")
-    img.paste(spike_img, (10, 30, 215, 150))
+        # Draw main art
+        spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png").convert("RGBA")
+        img.paste(spike_img, (10, 30, 215, 150))
 
-    if rainbow:
-        rainbow_img = Image.open(f"media/types/rainbow.png").convert("RGBA")
-        img.paste(rainbow_img, (10, 30, 215, 150), rainbow_img)
+        if rainbow:
+            rainbow_img = Image.open(f"media/types/rainbow.png").convert("RGBA")
+            img.paste(rainbow_img, (10, 30, 215, 150), rainbow_img)
 
     # Draw each attack
     for a, y in zip(attacks, list(range(165, 350, 40))):
@@ -49,8 +62,18 @@ def draw_card(name, hp, type, attacks, rainbow):
 
     # Save the image
     attack_ids = "-".join([str(a["id"]) for a in attacks])
-    img.save(f"cards/{type}-{name}-{hp}-{attack_ids}.png")
-    img.show()
+
+    tags = []
+    if rainbow:
+        tags.append("Rainbow")
+
+    if len(tags) == 0:
+        tags_str = ""
+    else:
+        tags_str = "-".join(tags)
+
+    img.save(f"cards/{type}-{name}-{hp}-{attack_ids}{tags_str}.png")
+    # img.show()
 
 
 def main():
@@ -65,10 +88,17 @@ def main():
         else:
             rainbow = False
 
+        if randint(1, 20) == 1:
+            fa = True
+        else:
+            fa = False
+
         allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
         shuffle(allowed_attacks)
 
-        draw_card(spikeye["name"], hp, spikeye["type"], allowed_attacks[:4], rainbow)
+        draw_card(
+            spikeye["name"], hp, spikeye["type"], allowed_attacks[:4], rainbow, fa
+        )
 
 
 if __name__ == "__main__":
