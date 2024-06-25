@@ -76,7 +76,19 @@ attacks = [
         "description": "20 damage each turn to all cards",
         "damage": 20,
     },
-]
+{
+        "types": ["Leaf"],
+        "name": "grass blade",
+        "energy": ["leaf"] * 3,
+        "description": "",
+        "damage":90,
+    },{
+        "types": ["Leaf", "Wave"],
+        "name": "Seaweed",
+        "energy": ["Wave"] * 3 + ["Leaf"],
+        "description": "",
+        "damage": 120,
+    },]
 
 for i, attack in enumerate(attacks):
     attack["id"] = i

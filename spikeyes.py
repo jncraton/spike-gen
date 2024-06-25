@@ -15,13 +15,13 @@ spikeyes = [
         "type": "Flame",
     },
     {
-        "name": "Starlight",
-        "hp": 400,
-        "type": "Shadow",
+        "name": "Wavling",
+        "hp": 100,
+        "type": "Wave",
     },
-    {
-        "name": "Millslision",
-        "hp": 450,
-        "type": "Spell",
-    },
+#    {
+#        "name": "Millslision",
+#        "hp": 450,
+#        "type": "Spell",
+#    },
 ]
