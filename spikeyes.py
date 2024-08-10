@@ -19,9 +19,19 @@ spikeyes = [
         "hp": 100,
         "type": "Wave",
     },
-#    {
-#        "name": "Millslision",
-#        "hp": 450,
-#        "type": "Spell",
-#    },
+    {
+        "name": "Millslision",
+        "hp": 170,
+        "type": "Spell",
+    },
+    #    {
+    #        "name": "Fire",
+    #        "hp": 170,
+    #        "type": "Flame",
+    #    },
+    {
+        "name": "Water",
+        "hp": 170,
+        "type": "Wave",
+    },
 ]
