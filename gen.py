@@ -114,10 +114,10 @@ def main():
 
         shuffle(allowed_attacks)
 
-        if spikeye["rarity"] == "Rare" and randint(1, 3) == 1:
+        if spikeye["rarity"] == "Rare" and randint(1, 8) <= 7:
             continue
 
-        if spikeye["rarity"] == "Uncommon" and randint(1, 4) == 1:
+        if spikeye["rarity"] == "Uncommon" and randint(1, 8) <= 4:
             continue
 
         draw_card(
