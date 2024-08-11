@@ -2,31 +2,31 @@ spikeyes = [
     {
         "name": "Britebulb",
         "hp": 140,
-        "type": "Lightning",
+        "types": ["Lightning"],
         "rarity": "Uncommon",
     },
     {
         "name": "Grassnlaid",
         "hp": 140,
-        "type": "Leaf",
+        "types": ["Leaf"],
         "rarity": "Common",
     },
     {
         "name": "Smokeos",
         "hp": 140,
-        "type": "Flame",
+        "types": ["Flame"],
         "rarity": "Common",
     },
     {
         "name": "Wavling",
         "hp": 100,
-        "type": "Wave",
+        "types": ["Wave"],
         "rarity": "Common",
     },
     {
         "name": "Millslision",
         "hp": 170,
-        "type": "Spell",
+        "types": ["Spell"],
         "rarity": "Rare",
     },
     #    {
@@ -37,7 +37,7 @@ spikeyes = [
     {
         "name": "Water",
         "hp": 170,
-        "type": "Wave",
+        "types": ["Wave"],
         "rarity": "Common",
     },
 ]

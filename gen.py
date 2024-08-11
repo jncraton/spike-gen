@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw
 from random import randint, shuffle
 
 
-def draw_card(name, hp, type, attacks, rainbow, fa):
+def draw_card(name, hp, types, attacks, rainbow, fa):
     """Draw a single Spikeye card"""
     if rainbow:
         hp = hp * 2
@@ -51,8 +51,9 @@ def draw_card(name, hp, type, attacks, rainbow, fa):
     draw.text((175, 15), f"HP : {hp}", textcolor)
 
     # Add the type icon
-    type_img = Image.open(f"media/types/{type.lower()}.png").convert("RGBA")
-    img.paste(type_img, (154, 10, 170, 26), type_img)
+    for (x, t) in enumerate(types):
+        type_img = Image.open(f"media/types/{t.lower()}.png").convert("RGBA")
+        img.paste(type_img, (154 - x * 12, 10, 170 - x * 12, 26), type_img)
 
     # Draw each attack
     for a, y in zip(attacks, list(range(165, 350, 40))):
@@ -79,7 +80,7 @@ def draw_card(name, hp, type, attacks, rainbow, fa):
     else:
         tags_str = "-" + "-".join(tags)
 
-    img.save(f"cards/{type}-{name}{tags_str}-{hp}-{attack_ids}.png")
+    img.save(f"cards/{'-'.join(types)}-{name}{tags_str}-{hp}-{attack_ids}.png")
     # img.show()
 
 
@@ -107,7 +108,10 @@ def main():
         else:
             fa = False
 
-        allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
+        allowed_attacks = []
+        for t in spikeye["types"]:
+            allowed_attacks += [a for a in attacks if t in a["types"]]
+
         shuffle(allowed_attacks)
 
         if spikeye["rarity"] == "Rare" and randint(1, 3) == 1:
@@ -116,13 +120,10 @@ def main():
         if spikeye["rarity"] == "Uncommon" and randint(1, 4) == 1:
             continue
 
-        if spikeye["rarity"] == "Common" and randint(1, 5) == 1:
-            continue
-
         draw_card(
             name=spikeye["name"],
             hp=hp,
-            type=spikeye["type"],
+            types=spikeye["types"],
             attacks=allowed_attacks[:4],
             rainbow=rainbow,
             fa=fa,
