@@ -3,7 +3,7 @@ spikeyes = [
         "name": "Britebulb",
         "hp": 140,
         "type": "Lightning",
-        "rarity": "Common",
+        "rarity": "Uncommon",
     },
     {
         "name": "Grassnlaid",
@@ -27,7 +27,7 @@ spikeyes = [
         "name": "Millslision",
         "hp": 170,
         "type": "Spell",
-        "rarity": "Uncommon",
+        "rarity": "Rare",
     },
     #    {
     #        "name": "Fire",

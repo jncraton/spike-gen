@@ -110,7 +110,13 @@ def main():
         allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
         shuffle(allowed_attacks)
 
-        if spikeye["rarity"] == "Uncommon" and randint(1, 2) == 1:
+        if spikeye["rarity"] == "Rare" and randint(1, 3) == 1:
+            continue
+
+        if spikeye["rarity"] == "Uncommon" and randint(1, 4) == 1:
+            continue
+
+        if spikeye["rarity"] == "Common" and randint(1, 5) == 1:
             continue
 
         draw_card(
