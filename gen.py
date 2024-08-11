@@ -102,13 +102,16 @@ def main():
         else:
             rainbow = False
 
-        if randint(1, 30) == 1:
+        if randint(1, 20) == 1:
             fa = True
         else:
             fa = False
 
         allowed_attacks = [a for a in attacks if spikeye["type"] in a["types"]]
         shuffle(allowed_attacks)
+
+        if spikeye["rarity"] == "Uncommon" and randint(1, 2) == 1:
+            continue
 
         draw_card(
             name=spikeye["name"],
