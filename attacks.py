@@ -97,7 +97,13 @@ attacks = [
         "description": "",
         "damage": 90,
     },
-]
+    {
+        "types": ["Spell"],
+        "name": "Energy Sheild",
+        "energy": ["Spell"] * 3,
+        "description": "Halve the next damage done to this card",
+        "damage": "",
+     },]
 
 for i, attack in enumerate(attacks):
     attack["id"] = i
