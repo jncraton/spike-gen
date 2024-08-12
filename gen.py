@@ -95,8 +95,8 @@ def main():
         if filename.endswith(".png"):
             os.remove(os.path.join("cards", filename))
 
-    for spikeye in spikeyes * 100:
-        hp = spikeye["hp"] + randint(-4, 4) * 10
+    for spikeye in spikeyes * 4:
+        hp = spikeye["hp"]
 
         if randint(1, 36) == 1:
             rainbow = True
