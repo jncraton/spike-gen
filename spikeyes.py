@@ -40,4 +40,10 @@ spikeyes = [
         "types": ["Wave"],
         "rarity": "Common",
     },
+    {
+        "name": "Starlight",
+        "hp": 240,
+        "types": ["Shadow", "Lightning"],
+        "rarity": "Rare",
+    },
 ]
