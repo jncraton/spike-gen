@@ -104,6 +104,20 @@ attacks = [
         "description": "Halve the next damage done to this card",
         "damage": "",
     },
+    {
+        "types": ["Leaf"],
+        "name": "Grass Blade",
+        "energy": ["leaf"] * 5,
+        "description": "For the next 5 turns, +40 damage",
+        "damage": 60,
+    },
+    {
+        "types": ["Leaf"],
+        "name": "Grass Tickle",
+        "energy": ["leaf"] * 3,
+        "description": "",
+        "damage": 90,
+    },
 ]
 
 for i, attack in enumerate(attacks):
