@@ -83,10 +83,19 @@ def draw_card(name, hp, types, attacks, rainbow, fa):
     img.save(f"cards/{'-'.join(types)}-{name}{tags_str}-{hp}-{attack_ids}.png")
     # img.show()
 
+def get_attack(name):
+    from attacks import attacks
+
+    for attack in attacks:
+        if attack['name'] == name:
+            return attack
+    else:
+        print(f"No attack for {name}")
+        exit(1)
 
 def main():
-    from attacks import attacks
     from spikeyes import spikeyes
+    import csv
 
     # Remove any old cards
     import os
@@ -95,40 +104,21 @@ def main():
         if filename.endswith(".png"):
             os.remove(os.path.join("cards", filename))
 
-    for spikeye in spikeyes * 4:
-        hp = spikeye["hp"]
-
-        if randint(1, 36) == 1:
-            rainbow = True
-        else:
-            rainbow = False
-
-        if randint(1, 20) == 1:
-            fa = True
-        else:
-            fa = False
-
-        allowed_attacks = []
-        for t in spikeye["types"]:
-            allowed_attacks += [a for a in attacks if t in a["types"]]
-
-        shuffle(allowed_attacks)
-
-        if spikeye["rarity"] == "Rare" and randint(1, 8) <= 7:
-            continue
-
-        if spikeye["rarity"] == "Uncommon" and randint(1, 8) <= 4:
-            continue
-
+    for card in csv.DictReader(open('cards.csv')):
+        types = [card["type1"], card["type2"], card["type3"]]
+        types = [t for t in types if t]
+        
+        attacks = [card["attack1"], card["attack2"], card["attack3"]]
+        attacks = [get_attack(a) for a in attacks if a]
+        
         draw_card(
-            name=spikeye["name"],
-            hp=hp,
-            types=spikeye["types"],
-            attacks=allowed_attacks[:4],
-            rainbow=rainbow,
-            fa=fa,
+            name=card["name"],
+            hp=card["hp"],
+            types=types,
+            attacks=attacks,
+            rainbow=card["rainbow"] == "y",
+            fa=card["fullart"] == "y",
         )
-
 
 if __name__ == "__main__":
     main()
