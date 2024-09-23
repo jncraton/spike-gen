@@ -61,11 +61,6 @@ def draw_card(name, hp, types, attacks, rainbow, fa):
         draw.text((15, y + 15), f"{a['description']}", textcolor)
         draw.text((200, y), f"{a['damage']}", textcolor)
 
-        for i, energy in enumerate(a["energy"]):
-            x = 100 + i * 18
-            energy_img = Image.open(f"media/types/{energy.lower()}.png").convert("RGBA")
-            img.paste(energy_img, (x, y, x + 16, y + 16), energy_img)
-
     # Save the image
     attack_ids = "-".join([str(a["id"]) for a in attacks])
 
