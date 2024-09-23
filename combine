@@ -1,0 +1,10 @@
+#!/bin/sh
+
+montage \
+  cards/*.png \
+  -page letter \
+  -mode concatenate \
+  -tile 4x4 \
+  -geometry +10+10 \
+  -background "#FFFFFF" \
+  output.pdf
