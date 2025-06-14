@@ -108,7 +108,7 @@ def main():
         
         draw_card(
             name=card["name"],
-            hp=card["hp"],
+            hp=int(card["hp"]),
             types=types,
             attacks=attacks,
             rainbow=card["rainbow"] == "y",

@@ -1,2 +1,5 @@
 name,hp,type1,type2,type3,attack1,attack2,attack3,rainbow,fullart
-Grassnlaid,100,leaf,,,Growth,Grass Blade,Gold leaf,,
+Grassnlaid,498,leaf,,,Grass Spin,Growth,Leaf Smack,,
+Grassnlaid,498,leaf,,,Grass Spin,Growth,Leaf Smack,y,
+Grassnlaid,498,leaf,,,Grass Spin,Growth,Leaf Smack,y,y
+Grassnlaid,498,leaf,,,Grass Spin,Growth,Leaf Smack,,y
