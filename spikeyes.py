@@ -29,11 +29,6 @@ spikeyes = [
         "types": ["Spell"],
         "rarity": "Rare",
     },
-    #    {
-    #        "name": "Fire",
-    #        "hp": 170,
-    #        "type": "Flame",
-    #    },
     {
         "name": "Water",
         "hp": 170,
