@@ -15,7 +15,7 @@ attacks = [
         "types": ["Flame"],
         "name": "Wildfire",
         "description": "This attack does 20 damage to this card.",
-        "damage": 140,
+        "damage": 60,
     },
     {
         "types": ["Flame"],
