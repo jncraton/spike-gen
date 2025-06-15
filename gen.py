@@ -63,6 +63,7 @@ def draw_card(name, hp, types, attacks, rainbow, fa):
 
     # Save the image
     attack_ids = "-".join([str(a["id"]) for a in attacks])
+    img.save(f"cards/{type}-{name}-{hp}-{attack_ids}.png")
 
     tags = []
     if rainbow:
