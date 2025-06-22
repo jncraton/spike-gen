@@ -2,9 +2,8 @@
 
 montage \
   cards/*.png \
-  -page letter \
-  -mode concatenate \
-  -tile 4x4 \
-  -geometry +10+10 \
+  -page 850x1100 \
+  -geometry 225x350 \
+  -density 100 \
   -background "#FFFFFF" \
   output.pdf
