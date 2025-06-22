@@ -1,6 +1,9 @@
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 from random import randint, shuffle
 
+# use a truetype font
+title_font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 14)
+font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 10)
 
 def draw_card(name, hp, types, attacks, rainbow, fa):
     """Draw a single Spikeye card"""
@@ -45,21 +48,21 @@ def draw_card(name, hp, types, attacks, rainbow, fa):
             img.paste(rainbow_img, (10, 30, 215, 150), rainbow_img)
 
     # Draw name
-    draw.text((15, 15), name, textcolor)
+    draw.text((15, 8), name, textcolor, font=title_font)
 
     # Draw hp
-    draw.text((175, 15), f"HP : {hp}", textcolor)
+    draw.text((160, 8), f"HP : {hp}", textcolor, font=title_font)
 
     # Add the type icon
     for (x, t) in enumerate(types):
         type_img = Image.open(f"media/types/{t.lower()}.png").convert("RGBA")
-        img.paste(type_img, (154 - x * 12, 10, 170 - x * 12, 26), type_img)
+        img.paste(type_img, (139 - x * 12, 10, 155 - x * 12, 26), type_img)
 
     # Draw each attack
     for a, y in zip(attacks, list(range(165, 350, 40))):
-        draw.text((15, y), f"{a['name']}", textcolor)
-        draw.text((15, y + 15), f"{a['description']}", textcolor)
-        draw.text((200, y), f"{a['damage']}", textcolor)
+        draw.text((15, y-4), f"{a['name']}", textcolor, font=title_font)
+        draw.text((15, y + 15), f"{a['description']}", textcolor, font=font)
+        draw.text((200, y-4), f"{a['damage']}", textcolor, font=title_font)
 
         energy_img = Image.open(f"media/types/energy.png").convert("RGBA")
         for x in range(a['energy']):
