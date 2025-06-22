@@ -13,6 +13,16 @@ print.pdf: gen
 	  -background "#FFFFFF" \
 	  print.pdf
 
+print-300.pdf: gen
+	montage \
+   cards/*.png \
+   -page 2550x3300+60+20 \
+   -geometry 675x1050+0+0 \
+   -tile 3x3 \
+   -density 300 \
+   -background "#FFFFFF" \
+   print.pdf
+
 format:
 	black *.py
 
