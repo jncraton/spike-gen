@@ -1,7 +1,9 @@
-all:
+all: print.pdf
+
+gen:
 	python3 gen.py
 
-print.pdf:
+print.pdf: gen
 	montage \
 	  cards/*.png \
 	  -page 850x1100+60+20 \
