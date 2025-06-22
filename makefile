@@ -16,3 +16,4 @@ format:
 
 clean:
 	rm -rf cards/*.png
+	rm -f print.pdf
