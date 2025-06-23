@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 from random import randint, shuffle
 
 # use a truetype font
-title_font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 14)
+title_font = ImageFont.truetype("noto-sans-webfont.extracondensedbold.ttf", 14)
 font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 10)
 
 def draw_card(name, hp, types, attacks, rainbow, fa):
