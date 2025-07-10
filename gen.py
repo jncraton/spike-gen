@@ -5,12 +5,10 @@ from random import randint, shuffle
 title_font = ImageFont.truetype("noto-sans-webfont.extracondensedbold.ttf", 14)
 font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 10)
 
-def draw_card(name, hp, types, attacks, rainbow, fa):
+def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black"):
     """Draw a single Spikeye card"""
     if rainbow:
         hp = hp * 2
-
-    textcolor = "black"
 
     # Create empty image
     img = Image.new("RGB", (225, 350))
@@ -28,7 +26,6 @@ def draw_card(name, hp, types, attacks, rainbow, fa):
             filename = f"media/spikeyes/{name.lower()}01_fa.png"
             spike_img = Image.open(filename).convert("RGBA")
             img.paste(spike_img, (0, 0, 225, 350))
-            textcolor = "white"
         except FileNotFoundError:
             fa = False
         if rainbow and fa:
@@ -120,6 +117,7 @@ def main():
             attacks=attacks,
             rainbow=card["rainbow"] == "y",
             fa=card["fullart"] == "y",
+            textcolor=card["textcolor"] or "black",
         )
 
 if __name__ == "__main__":
