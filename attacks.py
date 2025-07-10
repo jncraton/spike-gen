@@ -117,6 +117,20 @@ attacks = [
         "description": "",
         "damage": 110,
         "energy": 5,
+    },
+    {
+        "types": ["Ice"],
+        "name": "Snowfall",
+        "description": "",
+        "damage": 60,
+        "energy": 4,
+    },
+    {
+        "types": ["Ice"],
+        "name": "Ice dash",
+        "description": "draw 2 cards. This does 20 more damage for each card you have ",
+        "damage": 30,
+        "energy": 5,
     },]
 
 for i, attack in enumerate(attacks):
