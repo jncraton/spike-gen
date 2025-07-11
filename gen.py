@@ -6,6 +6,7 @@ from datetime import datetime
 title_font = ImageFont.truetype("noto-sans-webfont.extracondensedbold.ttf", 14)
 font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 10)
 
+
 def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", description=""):
     """Draw a single Spikeye card"""
     if rainbow:
@@ -49,7 +50,7 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", descript
     draw.text((15, 8), name, textcolor, font=title_font)
 
     # Draw hp
-    if hp>0:
+    if hp > 0:
         draw.text((160, 8), f"HP : {hp}", textcolor, font=title_font)
 
     if len(description) > 0:
@@ -63,17 +64,18 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", descript
 
         # Draw each attack
         for a, y in zip(attacks, list(range(165, 350, 40))):
-            draw.text((15, y-4), f"{a['name']}", textcolor, font=title_font)
+            draw.text((15, y - 4), f"{a['name']}", textcolor, font=title_font)
             draw.text((15, y + 15), f"{a['description']}", textcolor, font=font)
-            draw.text((200, y-4), f"{a['damage']}", textcolor, font=title_font)
+            draw.text((200, y - 4), f"{a['damage']}", textcolor, font=title_font)
 
             energy_img = Image.open(f"media/types/energy.png").convert("RGBA")
-            for x in range(a['energy']):
-                img.paste(energy_img, (154 - x * 12, y, 166 - x * 12, y+12), energy_img)
+            for x in range(a["energy"]):
+                img.paste(
+                    energy_img, (154 - x * 12, y, 166 - x * 12, y + 12), energy_img
+                )
 
-    draw.text((160, 332), datetime.today().strftime('%Y-%m-%d'), textcolor, font=font)
+    draw.text((160, 332), datetime.today().strftime("%Y-%m-%d"), textcolor, font=font)
 
-    
     # Save the image
     attack_ids = "-".join([str(a["id"]) for a in attacks])
 
@@ -91,15 +93,17 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", descript
     img.save(f"cards/{'-'.join(types)}-{name}{tags_str}-{hp}-{attack_ids}.png")
     # img.show()
 
+
 def get_attack(name):
     from attacks import attacks
 
     for attack in attacks:
-        if attack['name'] == name:
+        if attack["name"] == name:
             return attack
     else:
         print(f"No attack for {name}")
         exit(1)
+
 
 def main():
     from spikeyes import spikeyes
@@ -112,13 +116,13 @@ def main():
         if filename.endswith(".png"):
             os.remove(os.path.join("cards", filename))
 
-    for card in csv.DictReader(open('cards.csv')):
+    for card in csv.DictReader(open("cards.csv")):
         types = [card["type1"], card["type2"], card["type3"]]
         types = [t for t in types if t]
-        
+
         attacks = [card["attack1"], card["attack2"], card["attack3"]]
         attacks = [get_attack(a) for a in attacks if a]
-        
+
         draw_card(
             name=card["name"],
             hp=int(card["hp"]),
@@ -129,6 +133,7 @@ def main():
             textcolor=card["textcolor"] or "black",
             description=card["description"],
         )
+
 
 if __name__ == "__main__":
     main()

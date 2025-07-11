@@ -131,7 +131,8 @@ attacks = [
         "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand. card you have.",
         "damage": "0+",
         "energy": 5,
-    },]
+    },
+]
 
 for i, attack in enumerate(attacks):
     attack["id"] = i
