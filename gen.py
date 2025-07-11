@@ -48,7 +48,8 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black"):
     draw.text((15, 8), name, textcolor, font=title_font)
 
     # Draw hp
-    draw.text((160, 8), f"HP : {hp}", textcolor, font=title_font)
+    if hp>0:
+        draw.text((160, 8), f"HP : {hp}", textcolor, font=title_font)
 
     # Add the type icon
     for (x, t) in enumerate(types):
