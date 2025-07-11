@@ -5,7 +5,7 @@ from random import randint, shuffle
 title_font = ImageFont.truetype("noto-sans-webfont.extracondensedbold.ttf", 14)
 font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 10)
 
-def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black"):
+def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", description=""):
     """Draw a single Spikeye card"""
     if rainbow:
         hp = hp * 2
@@ -51,20 +51,24 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black"):
     if hp>0:
         draw.text((160, 8), f"HP : {hp}", textcolor, font=title_font)
 
-    # Add the type icon
-    for (x, t) in enumerate(types):
-        type_img = Image.open(f"media/types/{t.lower()}.png").convert("RGBA")
-        img.paste(type_img, (139 - x * 12, 10, 155 - x * 12, 26), type_img)
+    if len(description) > 0:
+        # Draw description
+        draw.text((15, 161), description, textcolor, font=font)
+    else:
+        # Add the type icon
+        for (x, t) in enumerate(types):
+            type_img = Image.open(f"media/types/{t.lower()}.png").convert("RGBA")
+            img.paste(type_img, (139 - x * 12, 10, 155 - x * 12, 26), type_img)
 
-    # Draw each attack
-    for a, y in zip(attacks, list(range(165, 350, 40))):
-        draw.text((15, y-4), f"{a['name']}", textcolor, font=title_font)
-        draw.text((15, y + 15), f"{a['description']}", textcolor, font=font)
-        draw.text((200, y-4), f"{a['damage']}", textcolor, font=title_font)
+        # Draw each attack
+        for a, y in zip(attacks, list(range(165, 350, 40))):
+            draw.text((15, y-4), f"{a['name']}", textcolor, font=title_font)
+            draw.text((15, y + 15), f"{a['description']}", textcolor, font=font)
+            draw.text((200, y-4), f"{a['damage']}", textcolor, font=title_font)
 
-        energy_img = Image.open(f"media/types/energy.png").convert("RGBA")
-        for x in range(a['energy']):
-            img.paste(energy_img, (154 - x * 12, y, 166 - x * 12, y+12), energy_img)
+            energy_img = Image.open(f"media/types/energy.png").convert("RGBA")
+            for x in range(a['energy']):
+                img.paste(energy_img, (154 - x * 12, y, 166 - x * 12, y+12), energy_img)
     
     # Save the image
     attack_ids = "-".join([str(a["id"]) for a in attacks])
@@ -119,6 +123,7 @@ def main():
             rainbow=card["rainbow"] == "y",
             fa=card["fullart"] == "y",
             textcolor=card["textcolor"] or "black",
+            description=card["description"],
         )
 
 if __name__ == "__main__":
