@@ -47,8 +47,12 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", descript
             img.paste(rainbow_img, (10, 30, 215, 150), rainbow_img)
 
     # Draw name
-    draw.text((15, 8), name, textcolor, font=title_font)
-
+    if rainbow:
+        draw.text((60, 8), name, textcolor, font=title_font)
+        rainbow_img = Image.open(f"media/spikeyes/rainbow.png").convert("RGBA")
+        img.paste(rainbow_img, (15, 15, 55, 24), rainbow_img)
+    else:
+        draw.text((15, 8), name, textcolor, font=title_font)
     # Draw hp
     if hp > 0:
         draw.text((160, 8), f"HP : {hp}", textcolor, font=title_font)
