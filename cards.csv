@@ -1,8 +1,8 @@
 name,hp,type1,type2,type3,attack1,attack2,attack3,rainbow,fullart,textcolor,description
-Stick,0,,,,,,,,,,What is brown and sticky?
+Spikeye-eye,0,,,,,,,,,,Draw a spikeye card from your discard pile.
 Grassnlaid,80,leaf,,,Grass Spin,Growth,Leaf Smack,,,,
 Grassnlaid,60,leaf,,,Grass Spin,Growth,Leaf Smack,y,,,
-Grassnlaid,60,leaf,,,Grass Spin,Growth,Leaf Smack,,y,limegreen,
+Grassnlaid,60,leaf,,,Grass Spin,Growth,Leaf Smack,,y,darkgreen,
 Smokeos,80,flame,,,Firespin,Flame punch,,,,,
 Smokeos,60,flame,,,Firespin,Flame punch,,y,,,
 Smokeos,60,flame,,,Firespin,Flame punch,,,y,cornsilk,

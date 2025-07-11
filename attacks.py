@@ -128,7 +128,7 @@ attacks = [
     {
         "types": ["Ice"],
         "name": "Ice dash",
-        "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand. card you have.",
+        "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand.",
         "damage": "0+",
         "energy": 5,
     },
