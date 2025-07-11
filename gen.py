@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 from random import randint, shuffle
+from datetime import datetime
 
 # use a truetype font
 title_font = ImageFont.truetype("noto-sans-webfont.extracondensedbold.ttf", 14)
@@ -69,6 +70,9 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", descript
             energy_img = Image.open(f"media/types/energy.png").convert("RGBA")
             for x in range(a['energy']):
                 img.paste(energy_img, (154 - x * 12, y, 166 - x * 12, y+12), energy_img)
+
+    draw.text((160, 332), datetime.today().strftime('%Y-%m-%d'), textcolor, font=font)
+
     
     # Save the image
     attack_ids = "-".join([str(a["id"]) for a in attacks])
