@@ -39,7 +39,7 @@ def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", descript
         draw.rectangle([(10, 30), (215, 150)], fill="tan", outline="black", width=1)
 
         # Draw main art
-        spike_img = Image.open(f"media/spikeyes/{name.lower()}01.png").convert("RGBA")
+        spike_img = Image.open(f"media/spikeyes/{name.lower().replace(' ', '-')}01.png").convert("RGBA")
         img.paste(spike_img, (10, 30, 215, 150))
 
         if rainbow:
