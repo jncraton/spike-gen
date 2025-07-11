@@ -1,11 +1,9 @@
 name,hp,type1,type2,type3,attack1,attack2,attack3,rainbow,fullart,textcolor,description
 Spikeye Eye,0,,,,,,,,,,Draw a spikeye card from your discard pile.
 Grassnlaid,80,leaf,,,Grass Spin,Growth,Leaf Smack,,,,
-Grassnlaid,60,leaf,,,Grass Spin,Growth,Leaf Smack,y,,,
-Grassnlaid,60,leaf,,,Grass Spin,Growth,Leaf Smack,,y,darkgreen,
+Grassnlaid,80,leaf,,,Grass Spin,Growth,Leaf Smack,,y,darkgreen,
 Smokeos,80,flame,,,Firespin,Flame punch,,,,,
-Smokeos,60,flame,,,Firespin,Flame punch,,y,,,
-Smokeos,60,flame,,,Firespin,Flame punch,,,y,cornsilk,
-Flameos,90,flame,,,Steam wall,Lava pour,Hot bolt,,,,
+Smokeos,80,flame,,,Firespin,Flame punch,,,y,cornsilk,
 Flameos,70,flame,,,Steam wall,Lava pour,Hot bolt,y,,,
-Icespike,90,ice,,,Snowfall,Ice dash,,,y,darkblue,
+Icespike,60,ice,,,Snowfall,Ice dash,,y,y,darkblue,
+Icespike,90,ice,,,Snowfall,Ice dash,,,,,
