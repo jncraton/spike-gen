@@ -4,7 +4,7 @@ Grassnlaid,80,leaf,,,Grass Spin,Growth,Leaf Smack,,,,
 Grassnlaid,80,leaf,,,Grass Spin,Growth,Leaf Smack,,y,darkgreen,
 Smokeos,80,flame,,,Firespin,Flame punch,,,,,
 Smokeos,80,flame,,,Firespin,Flame punch,,,y,cornsilk,
-Flameos,70,flame,,,Steam wall,Lava pour,Hot bolt,y,,,
+Flameos,70,flame,,,Steam wall,Lava pour,Hot bolt,y,y,red,
 Icespike,60,ice,,,Snowfall,Ice dash,,y,y,darkblue,
 Icespike,90,ice,,,Snowfall,Ice dash,,,,,
 Candlelight,0,,,,,,,,,,Draw 2 cards.
