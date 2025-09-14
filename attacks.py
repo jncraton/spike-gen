@@ -42,7 +42,7 @@ attacks = [
         "energy": 1,
     },
     {
-        "types": ["Flame", "Stone"],
+        "types": ["Flame", "Earth"],
         "name": "Charcoal",
         "description": "",
         "damage": 40,
@@ -126,13 +126,27 @@ attacks = [
         "energy": 4,
     },
     {
+        "types": ["Earth"],
+        "name": "Boulder crash",
+        "description": "This attack may do 60 more damage.\n If it does, this card does 50 damage \n to itself.",
+        "damage": "80",
+        "energy": 4,
+    },
+    {
         "types": ["Ice"],
         "name": "Ice dash",
         "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand.",
         "damage": "0+",
         "energy": 5,
     },
-]
+    {
+        "types": ["Leaf", "Poison"],
+        "name": "Poison Ivy",
+        "description": "your next turn, poison types' attacks do \n +80 damage ",
+        "damage": "40",
+        "energy": 3,
+    },
+    ]
 
 for i, attack in enumerate(attacks):
     attack["id"] = i
