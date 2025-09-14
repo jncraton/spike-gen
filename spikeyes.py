@@ -18,6 +18,12 @@ spikeyes = [
         "rarity": "Common",
     },
     {
+        "name": "Ivylape",
+        "hp": 80,
+        "types": ["Leaf"],
+        "rarity": "Common",
+    },
+    {
         "name": "Wavelett",
         "hp": 70,
         "types": ["Wave"],
@@ -35,4 +41,17 @@ spikeyes = [
         "types": ["Shadow", "Lightning"],
         "rarity": "Rare",
     },
+    {
+        "name": "Swiftkill",
+        "hp": 70,
+        "types": ["Shadow", "Earth"],
+        "rarity": "Rare",
+    },
+    {
+        "name": "Ivylape",
+        "hp": 60,
+        "types": ["Leaf", "Poison"],
+        "rarity": "Rare",
+    },
 ]
+
