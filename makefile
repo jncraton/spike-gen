@@ -27,5 +27,5 @@ format:
 	black *.py
 
 clean:
-	rm -rf cards/*.png
+	rm -rf cards/*.png __pycache__
 	rm -f print.pdf
