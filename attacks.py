@@ -65,7 +65,7 @@ attacks = [
     {
         "types": ["Lightning"],
         "name": "Lightning rod",
-        "description": "Your next turn lightning moves do x2 their normal damage",
+        "description": "Your next turn lightning types' moves do \n x2 their normal damage",
         "damage": 50,
         "energy": 5,
     },
@@ -144,6 +144,13 @@ attacks = [
         "name": "Poison Ivy",
         "description": "your next turn, poison types' attacks do \n +80 damage ",
         "damage": "40",
+        "energy": 3,
+    },
+    {
+        "types": ["Fire",],
+        "name": "Max Incinerate",
+        "description": "",
+        "damage": "70",
         "energy": 3,
     },
     ]
