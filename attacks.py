@@ -72,7 +72,7 @@ attacks = [
     {
         "types": ["Wave", "Lightning"],
         "name": "Storm",
-        "description": "20 damage each turn to all cards",
+        "description": "Do 20 damage next turn to all cards",
         "damage": 20,
         "energy": 5,
     },
