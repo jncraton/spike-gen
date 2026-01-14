@@ -85,7 +85,7 @@ attacks = [
     },
     {
         "types": ["Wave"],
-        "name": "Wave",
+        "name": "Tsunami",
         "description": "",
         "damage": 90,
         "energy": 5,
@@ -148,10 +148,17 @@ attacks = [
     },
     {
         "types": ["Fire",],
-        "name": "Max Incinerate",
+        "name": "Rainbow Wildfire",
         "description": "",
         "damage": "70",
         "energy": 3,
+    },
+    {
+        "types": ["Wave", "Lightning"],
+        "name": "Rainbow Storm",
+        "description": "40 damage next turn to all cards",
+        "damage": 40,
+        "energy": 5,
     },
     ]
 

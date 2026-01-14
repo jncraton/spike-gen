@@ -10,7 +10,7 @@ font = ImageFont.truetype("noto-sans-webfont.regular.ttf", 10)
 def draw_card(name, hp, types, attacks, rainbow, fa, textcolor="black", description=""):
     """Draw a single Spikeye card"""
     if rainbow:
-        hp = hp * 2
+        hp = hp * 1
 
     # Create empty image
     img = Image.new("RGB", (225, 350))

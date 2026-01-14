@@ -1,8 +1,10 @@
 name,hp,type1,type2,type3,attack1,attack2,attack3,rainbow,fullart,textcolor,description
-Crispyn,80,flame,lightning,,Hot bolt,Thunder slam,Lightning rod,,,,,
 Smokeos,80,flame,,,Firespin,Flame punch,,,,,
-Flameos,90,flame,,,Firespin,Lava pour,Hot bolt,,,,,
-Smokeos,80,flame,,,Firespin,Flame punch,,,,,
-Candlelight,0,,,,,,,,,,Draw 2 cards.
-Smokeos,60,flame,,,Max Incinerate,,,y,y,lightgrey,
-Zapling,60,lightning,,,Storm,Lightning rod,,,,,
+Grassnlaid,80,leaf,,,Grass Spin,Leaf Smack,,,,,
+Wavelett,60,wave,,,Tsunami,,,,,,
+Zapling,60,lightning,,,Thunder slam,Lightning rod,,,,,
+Swiftkill,70,shadow,earth,,Charcoal,Boulder crash,,,,,
+Smokeos,120,flame,,,Firespin,Flame punch,,y,y,,
+Grassnlaid,120,leaf,,,Rainbow Wildfire,,,y,y,,
+Wavelett,60,wave,,,Rainbow Storm,,,y,y,,
+Zapling,60,lightning,,,Rainbow Storm,,,y,y,,
