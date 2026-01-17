@@ -119,6 +119,13 @@ attacks = [
         "energy": 5,
     },
     {
+        "types": ["Leaf"],
+        "name": "Tossed Salad",
+        "description": "Hit em with some leaves.",
+        "damage": 10,
+        "energy": 1,
+    },
+    {
         "types": ["Ice"],
         "name": "Snowfall",
         "description": "",
@@ -166,6 +173,13 @@ attacks = [
         "description": "",
         "damage": "70",
         "energy": 3,
+    },
+    {
+        "types": ["Fire",],
+        "name": "Hot Potato",
+        "description": "A spud right out of the oven.",
+        "damage": "20",
+        "energy": 2,
     },
     {
         "types": ["Wave", "Lightning"],
