@@ -161,6 +161,13 @@ attacks = [
         "energy": 4,
     },
     {
+        "types": ["Earth"],
+        "name": "Tail twist",
+        "description": "A twirly tail thwack.",
+        "damage": "40",
+        "energy": 3,
+    },
+    {
         "types": ["Ice"],
         "name": "Ice dash",
         "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand.",
