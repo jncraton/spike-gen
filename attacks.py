@@ -105,6 +105,20 @@ attacks = [
         "energy": 5,
     },
     {
+        "types": ["Leaf", "Wave"],
+        "name": "Sweet Wind",
+        "description": "A pleasnt aroma that heals enemies",
+        "damage": -80,
+        "energy": 1,
+    },
+    {
+        "types": ["Leaf"],
+        "name": "Petal Punch",
+        "description": "A gentle jab.",
+        "damage": 10,
+        "energy": 7,
+    },
+    {
         "types": ["Wave"],
         "name": "Tsunami",
         "description": "",
