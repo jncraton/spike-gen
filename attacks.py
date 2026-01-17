@@ -15,6 +15,13 @@ attacks = [
     },
     {
         "types": ["Flame"],
+        "name": "Saber Thwack",
+        "description": "A slash from the fire saber",
+        "damage": 50,
+        "energy": 3,
+    },
+    {
+        "types": ["Flame"],
         "name": "Wildfire",
         "description": "This attack does 20 damage to this card.",
         "damage": 70,
