@@ -64,6 +64,20 @@ attacks = [
     },
     {
         "types": ["Lightning"],
+        "name": "Siri's Revenge",
+        "description": "",
+        "damage": 80,
+        "energy": 6,
+    },
+    {
+        "types": ["Lightning"],
+        "name": "System Error",
+        "description": "",
+        "damage": 10,
+        "energy": 1,
+    },
+    {
+        "types": ["Lightning"],
         "name": "Thunder slam",
         "description": "",
         "damage": 50,
