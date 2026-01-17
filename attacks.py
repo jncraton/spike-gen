@@ -140,6 +140,20 @@ attacks = [
         "energy": 5,
     },
     {
+        "types": ["Ice"],
+        "name": "Freezy breezy",
+        "description": "An icy wind.",
+        "damage": "80",
+        "energy": 6,
+    },
+    {
+        "types": ["Ice"],
+        "name": "Freezy sneezy",
+        "description": "The result of a cold cold.",
+        "damage": "10",
+        "energy": 1,
+    },
+    {
         "types": ["Leaf", "Poison"],
         "name": "Poison Ivy",
         "description": "your next turn, poison types' attacks do \n +80 damage ",
