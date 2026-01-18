@@ -126,6 +126,13 @@ attacks = [
         "energy": 5,
     },
     {
+        "types": ["Wave"],
+        "name": "Dive",
+        "description": "Heals 1 per second you hold your breath",
+        "damage": 0,
+        "energy": 3,
+    },
+    {
         "types": ["Spell"],
         "name": "Energy Sheild",
         "description": "Halve the next damage done to this card",
