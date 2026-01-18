@@ -134,6 +134,13 @@ attacks = [
     },
     {
         "types": ["Spell"],
+        "name": "Fireball",
+        "description": "A nice ball of fire.",
+        "damage": "100",
+        "energy": 5,
+    },
+    {
+        "types": ["Spell"],
         "name": "Energy Sheild",
         "description": "Halve the next damage done to this card",
         "damage": "",
