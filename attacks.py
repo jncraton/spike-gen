@@ -189,6 +189,13 @@ attacks = [
         "energy": 3,
     },
     {
+        "types": ["Earth"],
+        "name": "Stand Very Still",
+        "description": "Add three energy",
+        "damage": "40",
+        "energy": 1,
+    },
+    {
         "types": ["Ice"],
         "name": "Ice dash",
         "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand.",
