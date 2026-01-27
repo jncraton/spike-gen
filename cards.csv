@@ -1,10 +1,6 @@
 name,hp,type1,type2,type3,attack1,attack2,attack3,rainbow,fullart,textcolor,description
-Sabermeany,180,flame,,,Saber Thwack,Flame punch,,,,,
-Dinorite,80,leaf,,,Tsunami,Tail twist,,,,,
-Freezyfriend,480,ice,,,Freezy sneezy,Freezy breezy,,,,,
-Zapling,60,lightning,,,Thunder slam,Lightning rod,,,,,
-Hilleye,70,earth,,,Stand Very Still,Boulder crash,,,,,
-Frypad,160,lightning,,,System Error,Siri's Revenge,,y,y,,
-Lazydaisy,10,leaf,,,Sweet Wind,Petal Punch,,y,,,
-Chefy,360,flame,,,Tossed Salad,Hot Potato,,y,y,,
-Subby,60,wave,,,Dive,Tsunami,,,y,,,
+stick,0,,,,,,,,,,,
+string,0,,,,,,,,,,,
+rock,0,,,,,,,,,,,
+sword,0,,,,,,,,,,"Crafting: Rock + Stick       D:2     A:20"
+bow,0,,,,,,,,,,"Crafting: String + Stick       D:5     A:10"
