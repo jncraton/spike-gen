@@ -52,7 +52,7 @@ attacks = [
     {
         "types": ["Flame"],
         "name": "Grassfire",
-        "description": "+100 damage if your opponent is leaf type",
+        "description": "+70 damage if your opponent is leaf type",
         "damage": 50,
         "energy": 5,
     },
@@ -88,7 +88,7 @@ attacks = [
         "types": ["Leaf"],
         "name": "Petal Punch",
         "description": "",
-        "damage": 40,
+        "damage": 50,
         "energy": 3,
     },
     {
@@ -131,7 +131,7 @@ attacks = [
         "name": "Boulder crash",
         "description": "This attack may do 60 more damage.\n If it does, this card does 50 damage \n to itself.",
         "damage": "80",
-        "energy": 4,
+        "energy": 6,
     },
     {
         "types": ["Earth"],
@@ -143,7 +143,7 @@ attacks = [
     {
         "types": ["Ice"],
         "name": "Ice dash",
-        "description": "Draw 2 cards. This attack does 20 damage \n for each card in your hand.",
+        "description": "Draw 2 cards. This attack does 20 damage \n for each card now in your hand.",
         "damage": "0+",
         "energy": 5,
     },
@@ -167,6 +167,41 @@ attacks = [
         "description": "40 damage next turn to all cards",
         "damage": 40,
         "energy": 5,
+    },
+    {
+        "types": ["Flame", "Air"],
+        "name": "Firenado",
+        "description": "",
+        "damage": 60,
+        "energy": 3,
+    },
+    {
+        "types": ["Leaf", "Metal"],
+        "name": "Iron Leaf",
+        "description": "",
+        "damage": 40,
+        "energy": 2,
+    },
+    {
+        "types": ["Lightning", "Shadow"],
+        "name": "Shadow Storm",
+        "description": "attatch 2 attack tokens to any card/s.",
+        "damage": 40,
+        "energy": 4,
+    },
+    {
+        "types": ["Wave", "Spell"],
+        "name": "Enchanting Water",
+        "description": "Heal 70 damage in any way.",
+        "damage": 0,
+        "energy": 4,
+    },
+     {
+        "types": ["Any"],
+        "name": "Hidden Dagger",
+        "description": "Damage cannot be altered in any way.",
+        "damage": 20,
+        "energy": 1,
     },
     ]
 
