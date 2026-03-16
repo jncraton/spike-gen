@@ -1,29 +1,3 @@
 name,hp,type1,type2,type3,attack1,attack2,attack3,rainbow,fullart,textcolor,description
-stick,0,,,,,,,,,,,
-string,0,,,,,,,,,,,
-rock,0,,,,,,,,,,,
-sword,0,,,,,,,,,,"Crafting: Rock + Stick       D:2     A:20"
-bow,0,,,,,,,,,,"Crafting: String + Stick       D:5     A:10"
-Crispyn,80,flame,lightning,,Hot bolt,Firespin,,,,,,,
-Flameos,90,flame,,,Hot bolt,Lava pour,,,,,,,
-Ivylape,60,leaf,poison,,Petal Punch,Poison Ivy,,,,,,,
-Raveen,70,earth,,,Boulder crash,,,,,,,,
-Wavelett,90,wave,,,Rainbow Storm,,,y,y,,,,
-Zapling,90,lightning,,,Rainbow Storm,,,y,y,,,,
-Flameos,90,flame,,,Hot bolt,Lava pour,,,y,pink,,,
-Smokeos AF,100,flame,air,,Firenado,,,,,,,,
-Grassnlaid AF,100,leaf,metal,,Iron Leaf,,,,,,,,
-Zapling AF,80,lightning,shadow,,Shadow Storm,,,,,,,,,
-Wavelett AF,80,wave,spell,,Enchanting Water,,,,,,,,,
-Raveen,70,earth,,,Boulder crash,,,,y,,,,
-Icespike,90,ice,,,Ice dash,,,,,,,,
 Smokeos,80,flame,,,Flame punch,Firespin,,,,,,,
 Grassnlaid,80,leaf,,,Leaf Smack,Grass Spin,,,,,,,
-Wavelett,60,wave,,,Seaweed,,,,,,,,
-Zapling,60,lightning,,,Lightning rod,Hot bolt,,,,,,,
-Swiftkill,70,earth,,,Hidden Dagger,,,,,,,,
-Smokeos,120,flame,,,Rainbow Wildfire,,,y,y,,,,
-Grassnlaid,120,leaf,,,Rainbow Wildfire,,,y,y,,,,
-Candlelight,0,,,,,,,,,,"Crafting: Rock + Stick       Draw 2 cards"
-Spikeye-eye,0,,,,,,,,,,"Gain when you KO a card.     Heal 50 health."
-Spear,0,,,,,,,,,,"Crafting: Rock + Stick       D:1    A:30"
