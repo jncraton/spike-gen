@@ -58,7 +58,7 @@ attacks = [
     },
     {
         "types": ["Lightning"],
-        "name": "Thunder slam",
+        "name": "Thunder Slam",
         "description": "",
         "damage": 50,
         "energy": 3,
@@ -202,6 +202,41 @@ attacks = [
         "description": "Damage cannot be altered in any way.",
         "damage": 20,
         "energy": 1,
+    },
+    {
+        "types": ["Lightning"],
+        "name": "Electro Wave",
+        "description": "Do 30 damage to BOTH opposing cards.",
+        "damage": 0,
+        "energy": 5,
+    },
+    {
+        "types": ["Metal"],
+        "name": "X-Team United",
+        "description": "Heal 30 health of any card that also has \n this attack.",
+        "damage": 0,
+        "energy": 3,
+    },
+    {
+        "types": ["Wave"],
+        "name": "Tsunami",
+        "description": "",
+        "damage": 60,
+        "energy": 4,
+    },
+    {
+        "types": ["Lightning"],
+        "name": "Shock",
+        "description": "",
+        "damage": 30,
+        "energy": 3,
+    },
+    {
+        "types": ["Any"],
+        "name": "Swordfight",
+        "description": "this attack does 60 damge to whoever has \n the lowest HP",
+        "damage": 30,
+        "energy": 3,
     },
     ]
 
